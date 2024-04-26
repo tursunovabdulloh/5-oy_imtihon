@@ -80,7 +80,6 @@ select.addEventListener("change", (e) => {
 
 // input
 input.addEventListener("change", (e) => {
-  e.target.value.preventDefault();
   let qiymat = e.target.value;
   let ishtirok = qiymat.toLowerCase();
   ishtirok = ishtirok.charAt(0).toUpperCase() + ishtirok.slice(1);
