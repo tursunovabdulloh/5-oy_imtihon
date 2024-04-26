@@ -186,7 +186,7 @@ option {
   .card-section {
     display: grid;
     justify-content: center;
-    margin: 0 auto;
+    padding-left: 36px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   .wrapper {
@@ -197,7 +197,7 @@ option {
     font-size: 14px;
   }
   .form {
-    width: 343px;
+    width: 300px;
   }
   .form-div {
     padding-inline: 16px;

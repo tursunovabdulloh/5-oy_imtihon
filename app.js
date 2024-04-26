@@ -42,7 +42,7 @@ function creatCard(data) {
     const div = document.createElement("div");
     div.classList.add("card-div");
     div.innerHTML += `
-      <a href="about.html?slug=${name.slug}"></a>
+      <a href="/about.html?slug=${name.slug}"></a>
         <div class="card-div">
            <img class="card-img" src="${flags.png}" alt="" width="264px"  height="160px"/>
             <h2 class="card-name">${name.common}</h2>
