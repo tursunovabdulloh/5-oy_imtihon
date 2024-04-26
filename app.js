@@ -38,11 +38,11 @@ fetch("https://frontend-mentor-apis-6efy.onrender.com/countries")
 
 function creatCard(data) {
   card_Section.innerHTML = "";
-  data.forEach(({ area, name, population, region, flags, capital }) => {
+  data.forEach(({ name, population, region, flags, capital }) => {
     const div = document.createElement("div");
     div.classList.add("card-div");
     div.innerHTML += `
-        <a href="./about.html?id=${area}">
+      <a href="about.html?slug=${name.slug}"></a>
         <div class="card-div">
            <img class="card-img" src="${flags.png}" alt="" width="264px"  height="160px"/>
             <h2 class="card-name">${name.common}</h2>
@@ -58,7 +58,6 @@ function creatCard(data) {
               </p>
             </div>
        </div>
-        </a>
       `;
     card_Section.appendChild(div);
   });

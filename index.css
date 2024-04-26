@@ -136,19 +136,74 @@ option {
   margin-bottom: 45px;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 1200px) {
   .card-section {
-    grid-template-columns: repeat(auto-fill, minmax(338.7px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: center;
-    margin: 0 auto;
+    padding-left: 60px;
+  }
+  .form-div {
+    width: 100%;
+    padding-inline: 60px;
   }
 }
-@media (min-width: 175px) {
+@media (max-width: 1130px) {
+  .card-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+  }
+  .wrapper {
+    padding-inline: 60px;
+  }
+}
+@media (max-width: 950px) {
+  .card-section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 60px;
+    gap: 40px;
+  }
+  .wrapper {
+    padding-inline: 60px;
+  }
+}
+@media (max-width: 500px) {
   .card-section {
     display: grid;
     justify-content: center;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .card-section {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .wrapper {
+    padding-inline: 16px;
+    margin: 0;
+  }
+  .header-text {
+    font-size: 14px;
+  }
+  .form {
+    width: 343px;
+  }
+  .form-div {
+    padding-inline: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .card-div {
@@ -271,7 +326,6 @@ option {
   color: red;
 }
 /* about */
-
 .cocktail-section {
   text-align: center;
 }
