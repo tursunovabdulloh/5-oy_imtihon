@@ -42,7 +42,7 @@ function creatCard(data) {
     const div = document.createElement("div");
     div.classList.add("card-div");
     div.innerHTML += `
-      <a href="/about.html?slug=${name.slug}"></a>
+      <a href="./about.html?slug=${name.slug}">
         <div class="card-div">
            <img class="card-img" src="${flags.png}" alt="" width="264px"  height="160px"/>
             <h2 class="card-name">${name.common}</h2>
@@ -58,6 +58,8 @@ function creatCard(data) {
               </p>
             </div>
        </div>
+       </a>
+       
       `;
     card_Section.appendChild(div);
   });
@@ -66,9 +68,10 @@ function creatCard(data) {
 // option
 select.addEventListener("change", (e) => {
   card_Section.innerHTML = "";
+  let qiymat = e.target.value;
   loader.classList.remove("hidden");
   fetch(
-    `https://frontend-mentor-apis-6efy.onrender.com/countries?region=${e.target.value}`
+    `https://frontend-mentor-apis-6efy.onrender.com/countries?region=${qiymat}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -78,7 +81,7 @@ select.addEventListener("change", (e) => {
 });
 
 // input
-input.addEventListener("change", (e) => {
+input.addEventListener("input", (e) => {
   let qiymat = e.target.value;
   let ishtirok = qiymat.toLowerCase();
   ishtirok = ishtirok.charAt(0).toUpperCase() + ishtirok.slice(1);

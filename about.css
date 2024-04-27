@@ -1,0 +1,306 @@
+:root {
+  --header-bg: #fff;
+  --header-textColor: #111517;
+  --main-bg: rgb(249, 249, 251);
+  --input-bg: #fff;
+  --input-textColor: #111517;
+  --option-bg: #fff;
+  --card-bg: #ffffff;
+  --card-h: #111517;
+  --card-span: #111517;
+  --card-p: #343638;
+  --box-shadow: #0000001a;
+  --btn-bg: #2b3844;
+  --btn-textColor: #fff;
+  --about-btnText: #111517;
+  --about-btn-bg: #fff;
+  --about-hColor: #111517;
+  --about-spanColor: #111517;
+  --about-p: #111517;
+  --about-deck-name: #111517;
+  --about-deck-p: #111517;
+  --about-deck-span: #11151799;
+  --about-deck-btnBG: #fff;
+}
+.dark {
+  --header-bg: #2b3844;
+  --header-textColor: #fff;
+  --main-bg: #202c36;
+  --input-bg: #2b3844;
+  --input-textColor: #fff;
+  --option-bg: #2b3844;
+  --card-bg: #2b3844;
+  --card-h: #fff;
+  --card-span: #fff;
+  --card-p: #fff;
+  --btn-bg: #fff;
+  --btn-textColor: #2b3844;
+  --about-btnText: #fff;
+  --about-btn-bg: #2b3844;
+  --about-hColor: #fff;
+  --about-spanColor: #fff;
+  --about-p: #ffffffdd;
+  --about-deck-name: #fff;
+  --about-deck-p: #fff;
+  --about-deck-span: #ffffffa3;
+  --about-deck-btnBG: #2b3844;
+}
+body {
+  background-color: var(--main-bg);
+}
+.main {
+  background-color: var(--main-bg);
+}
+
+.header {
+  background-color: var(--header-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 24px;
+}
+.header-text {
+  font-family: "Nunito Sans";
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32.74px;
+  color: var(--header-textColor);
+}
+.header_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.82px;
+  border: 0;
+  background-color: transparent;
+  color: var(--header-textColor);
+  padding: 12px;
+}
+
+/* loader */
+.loader,
+.loader:before,
+.loader:after {
+  background: transparent;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader {
+  color: var(--primaryColor);
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-top: 20rem;
+  position: relative;
+  font-size: 3rem;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+/* card */
+
+.cocktail-section {
+  text-align: center;
+}
+
+.drink {
+  width: 500px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.drink img {
+  border-radius: 8px;
+}
+
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+
+.drink span {
+  margin-right: 100px;
+}
+
+.drink-data {
+  background: var(--card-bg);
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--card-bg);
+}
+
+.drink-info {
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .drink-info {
+    padding-top: 0;
+  }
+}
+.det-wrapper {
+  display: flex;
+  gap: 144px;
+}
+.det-img-div {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.det-a {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  padding: 10px;
+  padding-left: 32px;
+  padding-right: 39px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  color: var(--about-btnText);
+  background-color: var(--about-btn-bg);
+  margin-top: 80px;
+  border-radius: 5px;
+}
+.detail-img {
+  width: 480px;
+  height: 321px;
+  border-radius: 8px;
+}
+/*  */
+
+.det-dec-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+}
+.det-item-div {
+  display: flex;
+  gap: 141px;
+}
+.det-item-1-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 68px;
+}
+.dec-h2 {
+  font-family: "Nunito Sans";
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 43.65px;
+  color: var(--about-deck-name);
+  margin-bottom: 23px;
+}
+.about-p {
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--about-deck-p);
+}
+.about-span {
+  font-family: N "unito Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--about-deck-span);
+}
+.det-item-2-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+}
+.det-border-div {
+  display: flex;
+  gap: 10px;
+}
+.det-btn {
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19.1px;
+  color: var(--about-btnText);
+  padding-top: 5px;
+  padding-bottom: 4px;
+  padding-left: 27px;
+  padding-right: 27px;
+  background-color: var(--about-btn-bg);
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+}
+.ab-bor-text {
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--about-btnText);
+}
